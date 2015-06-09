@@ -1,17 +1,18 @@
 name: neutron-bigswitch
-summary: <Fill in summary here>
-maintainer: adam stokes <adam.stokes@bigboi>
+summary: Bigswitch neutron plugin
+maintainer: Adam Stokes <adam.stokes@canonical.com>
 description: |
-  <Multi-line description here>
+  Bigswitch neutron plugin
 categories:
-  - misc
-subordinate: false
+  - openstack
+subordinate: true
 provides:
-  provides-relation:
-    interface: interface-name
+  neutron-plugin:
+    interface: neutron-plugin
+    scope: container
 requires:
-  requires-relation:
-    interface: interface-name
-peers:
-  peer-relation:
-    interface: interface-name
+  container::
+    interface: juju-info
+    scope: container
+  neutron-metadata:
+    interface: neutron-metadata
