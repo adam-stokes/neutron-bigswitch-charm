@@ -11,7 +11,7 @@ provides:
     interface: neutron-plugin
     scope: container
 requires:
-  container::
+  container:
     interface: juju-info
     scope: container
   neutron-metadata:

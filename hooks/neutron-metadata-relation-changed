@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Entry point for most relations since we run a config script 
+./config-changed
